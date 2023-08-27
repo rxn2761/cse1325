@@ -1,5 +1,4 @@
 import java.net.InetAddress;
-import javax.swing.JOptionPane;
 
 public class Hello
 {
