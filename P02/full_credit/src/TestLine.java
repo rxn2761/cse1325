@@ -1,7 +1,7 @@
 public class TestLine {
     public static void main(String[] args)
     {
-        Line l1 = new Line(2, 2, 5, 6, Color.MAGENTO);
+        Line l1 = new Line(2, 2, 5, 6, Color.MAGENTA);
         Line l2 = new Line(24.521, 12.422, 12.126, 5.245, Color.CYAN);
         Line l3 = new Line(5.678, 3.145, 12.245, 8.543, Color.BRIGHTRED);
         Line l4 = new Line(1.234, 2.234, 3.456, 4.567, Color.WHITE);
