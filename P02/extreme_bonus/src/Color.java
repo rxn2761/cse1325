@@ -16,19 +16,19 @@ public enum Color {
     {
         if (rgb == 1)
         {
-            return "MAGENTA " + (Magenta+"(0xFF00FF)"+Reset);
+            return "MAGENTA " + "(" + Magenta + "0xFF00FF" + Reset + ")";
         }
         else if (rgb == 2)
         {
-            return "CYAN " + (Cyan+"(0x00FFFF)"+Reset);
+            return "CYAN " + "(" + Cyan + "0x00FFFF" + Reset + ")";
         }
         else if (rgb == 3)
         {
-            return "BRIGHTRED " + (BrightRed+"(0xEE4B2B)"+Reset);
+            return "BRIGHTRED " + "(" + BrightRed + "0xEE4B2B" + Reset + ")";
         }
         else if (rgb == 4)
         {
-            return "WHITE " + (White+"(0xFFFFFF)"+Reset);
+            return "WHITE " + "(" + White + "0xFFFFFF" + Reset + ")";
         }
         else
         {
