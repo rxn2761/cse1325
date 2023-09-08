@@ -1,4 +1,4 @@
-<project name="CSE1325-P03-FullCredit" default="build">
+<project name="CSE1325-P03-Bonus" default="build">
   <target name="build" description="Compile source tree java files">
     <javac includeantruntime="false" debug="true" failonerror="true">
       <src path="."/>
