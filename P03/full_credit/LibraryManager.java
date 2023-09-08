@@ -1,3 +1,4 @@
+import java.util.*;
 public class LibraryManager
 {
     public static void main(String[] args)
@@ -10,9 +11,19 @@ public class LibraryManager
         L.addPublication(P1);
         L.addPublication(P2);
         L.addPublication(P3);
+        L.toStringLibrary();
 
-        L.checkOut(1, "Rodney Nguyen");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Which book would you like to check out? ");
+        int BookIndex = sc.nextInt();
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("Who are you? ");
+        String personName = sc2.nextLine();
+
+        L.checkOut(BookIndex, personName);
 
         L.toStringLibrary();
+
     }
 }
