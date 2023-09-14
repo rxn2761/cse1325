@@ -1,0 +1,24 @@
+Publications
+Fahrenheit 451,Ray Bradbury,2010
+To Kill a Mockingbird,Harper Lee,2016
+The Catcher in the Rye,J D Salinger,2013
+Things Fall Apart,Chinua Achebe,1958
+Of Mice and Men,John Steinbeck,1937
+Where the Crawdads Sing,Delia Owens,2018
+Girl in Pieces,Kathleen Glasgow,2016
+Youd Be Home Now,Kathleen Glasgow,2021
+Dune,Frank Herbert,1965
+The Kite Runner,Khaled Hosseini,2003
+Videos
+Twilight,Stephanie Meyer,2005,122
+Mission: Impossible,Bruce Bernard Geller,2011,110
+Fast & Furious,Gary Scott Thompson,2021,106
+Patrons
+Rodney Nguyen,rxn2761@mavs.uta.edu
+Prof Rice,george.rice@uta.edu
+Theodore Roosevelt,roosevelt@rad.president
+John Adams,adams@astonishing.president
+George Washington,washington@wonderful.president
+Ulysses S Grant,grant@gorgeous.president
+John Quincy Adams,adams@amazing.president
+Barack Obama,obama@old.president
