@@ -139,20 +139,29 @@ public class LibraryManager
     }
     public static void newPublication()
     {
-        String title = console.readLine("Title: ");   if(title.isEmpty()) return;
-        String author = console.readLine("Author: "); if(author.isEmpty()) return;
-        int copyright = Integer.parseInt(console.readLine("Copyright: "));
-        String runtime = console.readLine("Runtime (Press 'Enter' if not video): ");
-        Publication p = null;
-        if(runtime.isEmpty())
+        try
         {
-            p = new Publication(title, author, copyright);
+            String title = console.readLine("Title: ");   if(title.isEmpty()) return;
+            String author = console.readLine("Author: "); if(author.isEmpty()) return;
+            int copyright = Integer.parseInt(console.readLine("Copyright: "));
+            String runtime = console.readLine("Runtime (Press 'Enter' if not video): ");
+            Publication p = null;
+            if(runtime.isEmpty())
+            {
+                p = new Publication(title, author, copyright);
+            }
+            else
+            {
+                p = new Video(title, author, copyright, Integer.parseInt(runtime));
+            }
+            L.addPublication(p);
         }
-        else
+        catch (Exception e)
         {
-            p = new Video(title, author, copyright, Integer.parseInt(runtime));
+            System.out.println(e.toString());
+            if (e.toString().contains("Invalid year for copyright"))
+            return;
         }
-        L.addPublication(p);
     }
     public static void newPatron()
     {
