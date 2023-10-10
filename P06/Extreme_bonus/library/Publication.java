@@ -25,6 +25,12 @@ public class Publication
         if (copyright < 1900 || copyright > currentYear)
             throw new IllegalArgumentException("Invalid year for copyright");
     }
+    public Publication(BufferedReader br) throws IOException
+    {
+        title = br.readLine();
+        author = br.readLine();
+        copyright = Integer.parseInt(br.readLine());
+    }
 
     public void checkOut(Patron p)
     {
@@ -76,24 +82,23 @@ public class Publication
         String[] temp = ObjectInfo.split(",");
         if (temp.length == 4)
         {
-            bw.write("BookCheckedIn" + "\n");
+            bw.write("<BOOK CHECKED IN>" + "\n");
             bw.write(temp[1] + "\n");
             bw.write(temp[2] + "\n");
             bw.write(temp[3] + "\n");
         }
         else
         {
-            bw.write("BookCheckedOut" + "\n");
+            bw.write("<BOOK CHECKED OUT>" + "\n");
             bw.write(temp[1] + "\n");
             bw.write(temp[2] + "\n");
             bw.write(temp[3] + "\n");
-            bw.write(temp[4] + "\n");
+
+            String[] split = temp[4].split("\\(");
+            bw.write(split[0] + "\n");
+            bw.write(split[1].replace(")", "") + "\n");
+
             bw.write(temp[5] + "\n");
         }
-    }
-
-    public void Publication(BufferedReader br) throws IOException
-    {
-
     }
 }

@@ -7,11 +7,18 @@ import java.time.*;
 public class Video extends Publication {
     private Duration runtime = null;
 
-    public Video(String title, String author, int copyright, int runtime) {
+    public Video(String title, String author, int copyright, int runtime)
+    {
         super(title, author, copyright);
         if (runtime < 0)
             throw new InvalidRuntimeException(title, runtime);
         this.runtime = Duration.ofMinutes(runtime);
+    }
+
+    public Video(BufferedReader br) throws IOException
+    {
+        super(br);
+        runtime = Duration.ofMinutes(Integer.parseInt(br.readLine()));
     }
 
     @Override
@@ -21,7 +28,7 @@ public class Video extends Publication {
         String[] temp = ObjectInfo.split(",");
         if (temp.length == 5)
         {
-            bw.write("VideoCheckedIn" + "\n");
+            bw.write("<VIDEO CHECKED IN>" + "\n");
             bw.write(temp[1] + "\n");
             bw.write(temp[2] + "\n");
             bw.write(temp[3] + "\n");
@@ -29,21 +36,19 @@ public class Video extends Publication {
         }
         else
         {
-            bw.write("VideoCheckedOut" + "\n");
+            bw.write("<VIDEO CHECKED OUT>" + "\n");
             bw.write(temp[1] + "\n");
             bw.write(temp[2] + "\n");
             bw.write(temp[3] + "\n");
             bw.write(temp[4] + "\n");
-            bw.write(temp[5] + "\n");
+
+            String[] split = temp[5].split("\\(");
+            bw.write(split[0] + "\n");
+            bw.write(split[1].replace(")", "") + "\n");
+
             bw.write(temp[6] + "\n");
         }
     }
-
-    public void Video(BufferedReader br) throws IOException
-    {
-
-    }
-
     @Override
     public String toString() {
         return toStringBuilder("Video", ", runtime " + runtime.toMinutes() + " minutes");

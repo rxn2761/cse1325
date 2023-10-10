@@ -1,7 +1,7 @@
 package library;
 import java.lang.ArithmeticException;
 import java.time.*;
-/** A error in the runtime duration for videos. */
+/** An error in the runtime duration for videos. */
 public class InvalidRuntimeException extends ArithmeticException
 {
     public InvalidRuntimeException ()

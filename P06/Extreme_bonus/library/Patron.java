@@ -15,16 +15,15 @@ public class Patron
         this.name = name;
         this.email = email;
     }
-
+    public Patron(BufferedReader br) throws IOException
+    {
+        name = br.readLine();
+        email = br.readLine();
+    }
     public void save(BufferedWriter bw) throws IOException
     {
         bw.write(name + "\n");
         bw.write(email + "\n");
-    }
-
-    public void Patron(BufferedReader br) throws IOException
-    {
-
     }
 
     @Override

@@ -1,0 +1,88 @@
+<LIBRARY NAME>
+Arlington Public Library
+<PATRONS>
+<PATRON>
+Rodney Nguyen
+rxn2761@mavs.uta.edu
+<PATRON>
+George Rice
+george.rice@uta.edu
+<PATRON>
+Theodore Roosevelt
+roosevelt@rad.pre
+<PATRON>
+John Adams
+Adams@astonishing.pre
+<PATRON>
+George Washington
+washington@wonderful.pre
+<PATRON>
+Ulysses Grant
+grant@gorgeous.pre
+<PATRON>
+John Adams
+adams@amazing.pre
+<PATRON>
+Barack Obama
+obama@old.pre
+<END PATRONS>
+<PUBLICATIONS>
+<BOOK CHECKED IN>
+Fahrenheit 451
+Ray Bradbury
+2010
+<BOOK CHECKED IN>
+To Kill a Mockingbird
+Harper Lee
+2016
+<VIDEO CHECKED OUT>
+Twilight
+Stephanie Meyer
+2005
+100
+Barack Obama
+obama@old.pre
+2023-10-23
+<BOOK CHECKED IN>
+The Catcher in the Rye
+J D Salinger
+2013
+<VIDEO CHECKED IN>
+Fast & Furious
+Gary Scott Thompson
+2021
+106
+<BOOK CHECKED IN>
+Things Fall Apart
+Chinua Achebe
+1958
+<BOOK CHECKED IN>
+Of Mice and Men
+John Steinbeck
+1937
+<BOOK CHECKED IN>
+Where the Crawdads Sing
+Delia Owens
+2018
+<BOOK CHECKED IN>
+Girl in Pieces
+Kathleen Glasgow
+2016
+<VIDEO CHECKED IN>
+Mission Impossible
+Bruce Bernard Geller
+2011
+110
+<BOOK CHECKED IN>
+oud Be Home Now
+Kathleen Glasgow
+2021
+<BOOK CHECKED IN>
+Dune
+Frank Herbert
+1965
+<BOOK CHECKED IN>
+The Kite Runner
+Khaled Hosseini
+2003
+<END PUBLICATIONS>
