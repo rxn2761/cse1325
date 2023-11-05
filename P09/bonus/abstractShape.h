@@ -10,8 +10,8 @@ using std::string;
 
 class abstractShape {
 public:
-    virtual string name() const;
-    virtual double area() const;
+    virtual string name() const = 0;
+    virtual double area() const = 0;
     string toString();
 };
 

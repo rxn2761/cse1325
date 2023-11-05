@@ -9,8 +9,8 @@ int main() {
 
     Rectangle rectangle(4.0, 6.0);
     Circle circle(6.0);
-    Rectangle rectangle2(2.0, 9.0);
-    Circle circle2(3.0);
+    Rectangle rectangle2(10.0, 19.0);
+    Circle circle2(15.0);
 
     S.push_back(&rectangle);
     S.push_back(&circle);
