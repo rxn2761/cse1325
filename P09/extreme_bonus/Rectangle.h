@@ -4,12 +4,12 @@
 
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#include "abstractShape.h"
+#include "Shape.h"
 #include <string>
 using std::string;
 
 
-class Rectangle: public abstractShape {
+class Rectangle: public Shape {
 public:
     Rectangle(double height, double width);
     string name() const override;

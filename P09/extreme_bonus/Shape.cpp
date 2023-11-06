@@ -2,17 +2,21 @@
 // Created by Rodney Nguyen on 11/1/23.
 //
 
-#include "abstractShape.h"
+#include "Shape.h"
 
 
-string abstractShape::name() const {
+string Shape::name() const {
     return "";
 }
 
-double abstractShape::area() const {
+double Shape::area() const {
     return 0;
 }
 
-string abstractShape::toString() {
+string Shape::toString() {
     return name() + " with area " + std::to_string(area());
+}
+
+void Shape::draw() const {
+
 }

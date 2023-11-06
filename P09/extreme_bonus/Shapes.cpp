@@ -1,11 +1,11 @@
 #include <iostream>
-#include "abstractShape.h"
+#include "Shape.h"
 #include "Rectangle.h"
 #include "Circle.h"
 #include <vector>
 
 int main() {
-    std::vector<abstractShape*> S;
+    std::vector<Shape*> S;
 
     Rectangle rectangle(4.0, 6.0);
     Circle circle(6.0);

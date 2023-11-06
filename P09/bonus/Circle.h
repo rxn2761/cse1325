@@ -4,12 +4,12 @@
 
 #ifndef CIRLCE_H
 #define CIRLCE_H
-#include "abstractShape.h"
+#include "Shape.h"
 #include <string>
 using std::string;
 
 
-class Circle: public abstractShape {
+class Circle: public Shape {
 public:
     Circle(double radius);
     string name() const override;

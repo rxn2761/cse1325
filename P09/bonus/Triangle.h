@@ -4,12 +4,12 @@
 
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
-#include "abstractShape.h"
+#include "Shape.h"
 #include <string>
 using std::string;
 
 
-class Triangle: public abstractShape {
+class Triangle: public Shape {
 public:
     Triangle(double height, double base);
     string name() const override;
