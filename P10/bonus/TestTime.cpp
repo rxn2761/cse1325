@@ -1,19 +1,6 @@
 #include <iostream>
 #include <ostream>
 #include "Time.h"
-#include <iomanip>
-
-
-std::ostream& operator<<(std::ostream& ost, const Time& time) {
-    ost << std::setfill('0') << std::setw(2) << time._hour << ":"
-        << std::setfill('0') << std::setw(2) << time._minute << ":"
-        << std::setfill('0') << std::setw(2) << time._second;
-    return ost;
-}
-
-Time operator+(int seconds, const Time& time){
-    return time + seconds;
-}
 
 
 int main() {

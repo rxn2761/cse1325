@@ -3,6 +3,7 @@
 //
 
 #include "Time.h"
+#include <iomanip>
 
 
 Time::Time(int hour, int minute, int second) : _hour(hour), _minute(minute), _second(second) {
@@ -27,4 +28,15 @@ Time Time::operator+(int seconds) const {
     int totalMinute = (totalSecond % 3600) / 60;
     totalSecond = (totalMinute % 60);
     return Time(totalHour, totalMinute, totalSecond);
+}
+
+std::ostream& operator<<(std::ostream& ost, const Time& time) {
+    ost << std::setfill('0') << std::setw(2) << time._hour << ":"
+        << std::setfill('0') << std::setw(2) << time._minute << ":"
+        << std::setfill('0') << std::setw(2) << time._second;
+    return ost;
+}
+
+Time operator+(int seconds, const Time& time){
+    return time + seconds;
 }
