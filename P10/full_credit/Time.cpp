@@ -107,3 +107,23 @@ bool Time::operator<=(const Time& time) const {
 bool Time::operator>=(const Time& time) const {
 return (*this > time) || (*this == time);
 }
+
+std::ostream& operator<<(std::ostream& ost, Time& time) {
+    ost << std::setfill('0') << std::setw(2) << time._hour << ":"
+        << std::setfill('0') << std::setw(2) << time._minute << ":"
+        << std::setfill('0') << std::setw(2) << time._second;
+    return ost;
+}
+
+std::istream& operator>>(std::istream& ist, Time& time) {
+    char colon1, colon2;
+    int h, m, s;
+    ist >> h >> colon1 >> m >> colon2 >> s;
+    if (colon1 == ':' && colon2 == ':') {
+        time = Time(h, m, s);
+    }
+    else {
+        ist.setstate(std::ios::failbit);
+    }
+    return ist;
+}
