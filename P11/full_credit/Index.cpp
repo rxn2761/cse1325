@@ -26,14 +26,20 @@ void Index::add_word(const Word &word, const std::string &filename, int line) {
 }
 
 std::ostream& operator<<(std::ostream& ost, const Index& index) {
-    for (const auto& wordEntry : index.index) {
-        ost << wordEntry.first << ":";
+    for (auto it = index.index.begin(); it != index.index.end(); ++it) {
 
-        for (const auto& location : wordEntry.second) {
-            ost << "  " << location;
+        //below codes should take care of the issue with displaying character ' correctly in Windows 10. Example of a word with that issue: [you've]
+        /*string word = it->first;
+        size_t position = word.find("’");
+        if (position != string::npos)
+            word = word.replace(position, 3, "'");*/
+
+        ost << "[" << it->first << "]";
+
+        for (auto locIt = it->second.begin(); locIt != it->second.end(); ++locIt) {
+            ost << " " << *locIt;
         }
-
-        ost << std::endl;
+        ost << endl;
     }
     return ost;
 }

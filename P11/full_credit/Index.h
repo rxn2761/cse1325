@@ -9,12 +9,15 @@
 using namespace std;
 typedef string Word;
 
+class Location;
+typedef std::set<Location> Locations;
+
 
 class Location;
 
 class Index {
 private:
-    using IndexMap = std::map<Word, std::set<Location>>;
+    using IndexMap = map<Word, Locations>;
     IndexMap index;
 
 public:

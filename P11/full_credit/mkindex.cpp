@@ -38,15 +38,15 @@ int main() {
 
     cout << index;
 
-    ofstream outputFile("index_output.txt");
-    if (outputFile.is_open()) {
-        outputFile << index;
-        outputFile.close();
-        cout << "Index written to 'index_output.txt'" << endl;
-    }
-    else {
-        cerr << "Error opening output file." << endl;
-        return 1;
-    }
+//// Write the index to a file
+    //ofstream outputFile("index_output.txt");
+    //if (outputFile.is_open()) {
+    //    outputFile << index;
+    //    outputFile.close();
+    //}
+    //else {
+    //    cerr << "Error opening output file." << endl;
+    //    return 1;
+    //}
     return 0;
 }

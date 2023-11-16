@@ -32,6 +32,6 @@ bool Location::operator>=(const Location& location) const {
 }
 
 std::ostream& operator<<(std::ostream& ost, const Location& location) {
-    ost << "Filename: " << location._filename << ", Line Number: " << location._line;
+    ost << "Filename: " << location._filename << " Line Number: " << location._line << ";";
     return ost;
 }
