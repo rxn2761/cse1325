@@ -28,10 +28,10 @@ void Index::add_word(const Word &word, const std::string &filename, int line) {
 std::ostream& operator<<(std::ostream& ost, const Index& index) {
     for (const auto& wordEntry : index.index) {
         Location::nextWord();
-        ost << wordEntry.first << ":";
+        ost << "[" << wordEntry.first << "]";
 
         for (const auto& location : wordEntry.second) {
-            ost << location;
+            ost << " " << location;
         }
 
         ost << endl;

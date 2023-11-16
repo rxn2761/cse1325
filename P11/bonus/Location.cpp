@@ -41,7 +41,7 @@ std::ostream& operator<<(std::ostream& ost, const Location& location) {
     if (location._filename == Location::last_filename) {
         ost << ", " << location._line;
     } else {
-        ost << "  Filename: " << location._filename << ", Line Number(s): " << location._line;
+        ost << "Filename: " << location._filename << ", Line Number(s): " << location._line;
         Location::last_filename = location._filename;
     }
     return ost;
